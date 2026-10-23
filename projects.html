@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects · Yijia Wu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-dot">Y</span>
+        <span>Yijia Wu</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="resume.html">Resume</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="contact.html">Contact Me</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-header container">
+      <h1>Projects</h1>
+      <p>A small, functional to-do app — pick a date, type a task, and keep track of what matters.</p>
+    </section>
+
+    <section class="section container" style="padding-top:8px;">
+      <div class="todo-app" id="todoApp">
+        <div class="todo-search-wrap">
+          <input type="text" id="todoSearch" class="todo-search-input" placeholder="🔍 Search tasks…" autocomplete="off">
+          <button type="button" id="todoSearchClear" class="todo-search-clear" hidden aria-label="Clear search">✕</button>
+        </div>
+        <div class="todo-input-row">
+          <div class="todo-input-group">
+            <div class="todo-emoji-wrap">
+              <button type="button" id="todoEmojiBtn" class="todo-emoji-btn" aria-label="Choose emoji">✨</button>
+              <div class="todo-emoji-panel" id="todoEmojiPanel" hidden>
+                <button type="button" class="todo-emoji-opt" data-emoji="✨">✨</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="📚">📚</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="💻">💻</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🧹">🧹</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🍳">🍳</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🏃">🏃</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="💡">💡</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🎯">🎯</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="📞">📞</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🛒">🛒</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="💊">💊</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="😴">😴</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="✈️">✈️</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🎨">🎨</button>
+                <button type="button" class="todo-emoji-opt" data-emoji="🎵">🎵</button>
+                <button type="button" class="todo-emoji-opt todo-emoji-clear" data-emoji="">✕</button>
+              </div>
+            </div>
+            <input type="text" id="todoText" class="todo-text-input" placeholder="What needs to be done?" autocomplete="off">
+          </div>
+          <input type="date" id="todoDate" class="todo-date-input">
+          <select id="todoPriority" class="todo-priority-select" aria-label="Priority">
+            <option value="low">Low</option>
+            <option value="medium" selected>Medium</option>
+            <option value="high">High</option>
+          </select>
+          <button id="todoAdd" class="btn btn-primary">Add</button>
+        </div>
+
+        <div class="todo-sections">
+          <div class="todo-section todo-section-open" id="todoSectionOpen">
+            <h3 class="todo-section-title">
+              <span class="todo-section-dot dot-open"></span>
+              <span class="todo-section-label">To Do</span>
+              <span class="todo-section-count" id="todoOpenCount">0</span>
+            </h3>
+            <ul class="todo-list" id="todoListOpen"></ul>
+            <div class="todo-section-empty" id="todoEmptyOpen">
+              <p>All done! 🎉 Time for a break.</p>
+            </div>
+          </div>
+
+          <div class="todo-section todo-section-done" id="todoSectionDone">
+            <h3 class="todo-section-title">
+              <span class="todo-section-dot dot-done"></span>
+              <span class="todo-section-label">Completed</span>
+              <span class="todo-section-count" id="todoDoneCount">0</span>
+            </h3>
+            <ul class="todo-list" id="todoListDone"></ul>
+            <div class="todo-section-empty" id="todoEmptyDone" hidden>
+              <p>Nothing completed yet.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="todo-empty" id="todoEmptyMain" hidden>
+          <div class="todo-empty-icon">📝</div>
+          <p>No tasks yet — add one above to get started.</p>
+        </div>
+
+        <div class="todo-footer">
+          <span id="todoCount">Completed 0 / 0</span>
+          <button id="todoClearCompleted" class="todo-clear-btn" hidden>Clear completed</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="fun-fact">
+        💡 <strong>Fun fact about me:</strong> My wardrobe is a devoted follower of low-saturation colors — pale pink, off-white, oat, and light khaki. The reason is simple: it looks like a gentle cup of latte.
+      </div>
+      <div class="footer-social">
+        <a href="contact.html" title="Email">✉️</a>
+        <a href="projects.html" title="GitHub">🐙</a>
+        <a href="resume.html" title="Resume">📄</a>
+        <a href="index.html" title="Home">🏠</a>
+      </div>
+      <p class="footer-copy">© 2026 Yijia Wu · Built with ☕ and 🐱</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
